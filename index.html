@@ -325,9 +325,11 @@ function submitForm(){
   var btn=document.querySelector('.btn-submit');
   btn.textContent='送信中...';btn.disabled=true;
   var params=new URLSearchParams();
-  params.append('name',name);params.append('salon',salon);
-  params.append('email',email);params.append('message',message);
-  fetch('https://script.google.com/macros/s/AKfycbyO0qYl-WqwFYc87DSdtghcs0qgMx7fv_ayY0Lk3i2qu91Wg-QxFn0RwZ2zjQv_uluT_Q/exec',{
+  params.append('entry.624642348',name);
+  params.append('entry.250795129',salon);
+  params.append('entry.1057749012',email);
+  params.append('entry.223245807',message);
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLSciW32xicwVHWfUKGdaXhsQLDbSgdPKy7fWwBrW60ChY1eW9w/formResponse',{
     method:'POST',mode:'no-cors',
     headers:{'Content-Type':'application/x-www-form-urlencoded'},
     body:params.toString()
